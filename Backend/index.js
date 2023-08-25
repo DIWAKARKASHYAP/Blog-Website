@@ -15,7 +15,9 @@ const port = 5000;
 //   optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
 // }
 
-const allowedOrigins = ['http://localhost:5173', 'http://127.0.0.1:5173'];
+// const allowedOrigins = ['http://localhost:5173', 'http://127.0.0.1:5173'];
+const allowedOrigins = ['https://blog-website-frontend-nu.vercel.app'];
+
 
 app.use(cors({
   origin: function(origin, callback){
