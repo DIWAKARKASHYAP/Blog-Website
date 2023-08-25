@@ -11,8 +11,8 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         <Auth0Provider
             domain="diwakardb.us.auth0.com"
             clientId="YHADxGv2TeOlwIluwCdxeFKMz3eOuIaq"
-            // redirectUri={window.location.origin + "/callback"}
-            redirectUri={ "http://localhost:5173/"}
+            redirectUri={window.location.origin}
+            // redirectUri={ "http://localhost:5173/"}
             cacheLocation="localstorage" 
         >
             <App />

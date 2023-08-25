@@ -9,7 +9,7 @@ function BlogCard({setBlogData}) {
     // const [error, setError] = useState(null);
     React.useEffect(() => {
         // Replace this URL with your desired API endpoint
-        const apiUrl = "http://localhost:5000/api/posts";
+        const apiUrl = "https://blog-website-tau-roan.vercel.app/api/posts";
 
         fetch(apiUrl)
             .then((response) => {

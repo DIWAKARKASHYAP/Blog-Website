@@ -55,7 +55,7 @@ function AdvancedTextEditor() {
         };
 
         try {
-            const response = await fetch("http://localhost:5000/api/posts", {
+            const response = await fetch("https://blog-website-tau-roan.vercel.app/api/posts", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
