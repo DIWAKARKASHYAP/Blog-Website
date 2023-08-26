@@ -5,6 +5,8 @@ import "react-quill/dist/quill.snow.css"; // Import styles
 import Autocomplete from "@mui/material/Autocomplete";
 import TextField from "@mui/material/TextField";
 import { hashtag } from "./form/data";
+import { NavLink } from "react-router-dom";
+
 
 function AdvancedTextEditor() {
     const [editorContent, setEditorContent] = useState("");
@@ -38,7 +40,7 @@ function AdvancedTextEditor() {
                             You can not create a Blog Until Login.
                         </div>
                     </div>
-                    <a href="./signin" className="text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2"> login now </a>
+                    <NavLink to="./signin" className="text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2"> login now </NavLink>
          
                 </div>
             </>
@@ -69,6 +71,13 @@ function AdvancedTextEditor() {
 
             const data = await response.json();
             console.log("Server Response:", data);
+            if(data.message == true){
+                alert("blog created successfully")
+                setFormData({})
+            }
+            else{
+                alert("server Error")
+            }
         } catch (error) {
             console.error(
                 "There was a problem with the fetch operation:",

@@ -16,7 +16,7 @@ const port = 5000;
 // }
 
 // const allowedOrigins = ['http://localhost:5173', 'http://127.0.0.1:5173'];
-const allowedOrigins = ['https://blog-website-frontend-nu.vercel.app'];
+const allowedOrigins = ['https://blog-website-frontend-nu.vercel.app/'];
 
 
 app.use(cors({
@@ -59,9 +59,9 @@ app.post('/api/posts', async (req, res) => {
 
   try {
     await newPost.save();
-    res.status(201).json({ message: 'Blog post created successfully' });
+    res.status(201).json({ message: true });
   } catch (error) {
-    res.status(500).json({ message: 'An error occurred' });
+    res.status(500).json({ message: false });
   }
 });
 
